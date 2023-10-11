@@ -135,9 +135,8 @@ function createDeck(){
 
 //Suffle with the Fisher-Yates algorithm
 function shuffleCards(){
-    console.log(cards.length)
     for(let i = cards.length -1; i > 0; i--) {
-        let randomIndex = Math.floor(Math.random() * (i*1));
+        let randomIndex = Math.floor(Math.random() * (i + 1));
         cards[randomIndex].style.order = i;
         cards[i].style.order = randomIndex;
     }
